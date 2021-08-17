@@ -190,7 +190,7 @@ function main($path)
     } else {
         $_SERVER['admin']=0;
     }
-        if (isset($GET['RefreshCacheG'])) {
+        if (isset($_GET['RefreshCacheG'])) {
         savecache('path_' . $path1 . '/?password', '', $_SERVER['disktag'], 1);
         savecache('customTheme', '', '', 1);
         return message('<meta http-equiv="refresh" content="2;URL=./">
