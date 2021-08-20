@@ -224,10 +224,6 @@ function main($path)
                 // return a json
                 return output(json_encode($files), 200, ['Content-Type' => 'application/json']);
             }
-            if ($_GET['json2']) {
-                // return a json
-                return output($files['list']), 200, ['Content-Type' => 'text/plain']);
-            }
             if (getConfig('autoJumpFirstDisk')) return output('', 302, [ 'Location' => path_format($_SERVER['base_path'].'/'.$disktags[0].'/') ]);
         } else {
             $_SERVER['disktag'] = splitfirst( substr(path_format($path), 1), '/' )[0];
@@ -366,6 +362,15 @@ function main($path)
             }
         }
         return output(json_encode($files), 200, ['Content-Type' => 'application/json']);
+    }
+    if ($_GET['json2']) {
+        // return a json
+        if ($files['type']=='folder' && !$_SERVER['admin']) {
+            foreach ($files['list'] as $k => $v) {
+                if (isHideFile($k)) unset($files['list'][$k]);
+            }
+        }
+        return output(json_encode($files['list']), 200, ['Content-Type' => 'application/json']);
     }
     // random file
     if (isset($_GET['random'])&&$_GET['random']!=='') {
