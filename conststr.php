@@ -13,6 +13,7 @@ $exts['zip'] = ['zip', 'rar', '7z', 'gz', 'tar'];
 $constStr = [
     'languages' => [
         'en-us' => 'English',
+        'es-es' => 'Español',
         'zh-tw' => '繁體中文',
         'zh-cn' => '简体中文',
         'ja' => '日本語',
@@ -29,6 +30,15 @@ $constStr = [
             4 => 'Thursday',
             5 => 'Friday',
             6 => 'Saturday',
+        ],
+        'es-es' => [
+            0 => 'Domingo',
+            1 => 'Lunes',
+            2 => 'Martes',
+            3 => 'Miércoles',
+            4 => 'Jueves',
+            5 => 'Viernes',
+            6 => 'Sábado',
         ],
         'zh-cn' => [
             0 => '星期日',
@@ -87,6 +97,34 @@ $constStr = [
     ],
     'EnvironmentsDescription' => [
         'en-us' => [
+            'admin' => 'The admin password, Login button will not show when empty',
+            'adminloginpage' => 'if set, the Login button will not display, and the login page no longer \'?admin\', it is \'?{this value}\'.',
+            'autoJumpFirstDisk' => 'used in multy disks, if 1, auto jump to first disk',
+            'customScript' => '<script> in all pages, e.g. http turn to https',
+            'customCss' => '<style> in <head>',
+            'customTheme' => 'an url of html',
+            'referrer' => 'only these domains can refer resourse in this site, format is a1.com|b2.com',
+            'domain_path' => 'more custom domain, format is a1.com:/dirto/path1|b2.com:/path2',
+            'diskname' => 'The disk name you want show.',
+            'diskDescription' => ' Some tips of this disk, not used in code.',
+            'disktag' => 'A tag used in store config and url.',
+            'disableShowThumb' => 'if 1, the ShowThumbnail button will not display',
+            'disableChangeTheme' => 'if 1, the Theme selection button will not display',
+            'downloadencrypt' => '0 or 1. if 1, the files in encrypt folder can be downloaded without password',
+            'dontBasicAuth' => 'if 1, will not popup user/pass windows in encrypted folder, but show the page in theme.',
+            'background' => 'Set an url as background photo.',
+            'backgroundm' => 'Set an url as background in mobile phone.',
+            'forceHttps' => 'if 1, force to redirect to https when visit via http.',
+            'theme' => 'Select theme for guest.',
+            'timezone' => 'Set default timezone.',
+            'guestup_path' => 'Set guest upload dir, before set this, the files in this dir will show as normal.',
+            'hideFunctionalityFile' => '0 or 1. if 1, some file will not show in list to guest, like readme.md',
+            'passfile' => 'The password of folder(& its childrens) will save in this file.',
+            'domainforproxy' => 'Will replace the https://xxxxx-my.sharepoint.com with this value.Add &Origindomain=xxxxx-my.sharepoint.com at last',
+            'public_path' => 'Show this Onedrive dir when through the long url of API Gateway.',
+            'sitename' => 'sitename',
+        ],
+        'es-es' => [
             'admin' => 'The admin password, Login button will not show when empty',
             'adminloginpage' => 'if set, the Login button will not display, and the login page no longer \'?admin\', it is \'?{this value}\'.',
             'autoJumpFirstDisk' => 'used in multy disks, if 1, auto jump to first disk',
@@ -259,6 +297,7 @@ $constStr = [
     ],
     'SetSecretsFirst' => [
         'en-us' => 'Set API in Config first! or reinstall.',
+        'es-es' => 'Set API in Config first! or reinstall.',
         'zh-cn' => '先在环境变量设置API！或重装。',
         'zh-tw' => '先在環境變數設定API！或重裝。',
         'ja' => '最初に環境変数にAPIを設定してください！',
@@ -268,6 +307,7 @@ $constStr = [
     ],
     'RefreshtoLogin' => [
         'en-us' => '<font color="red">Refresh</font> and login.',
+        'es-es' => '<font color="red">Refresh</font> and login.',
         'zh-cn' => '请<font color="red">刷新</font>页面后重新登录',
         'zh-tw' => '請<font color="red">重新整理</font>頁面後重新登入',
         'ja' => 'ページを<font color = "red">更新</font>して、再度ログインしてください',
@@ -277,6 +317,7 @@ $constStr = [
     ],
     'AdminLogin' => [
         'en-us' => 'Admin Login',
+        'es-es' => 'Inicio de sesión de administrador',
         'zh-cn' => '管理登录',
         'zh-tw' => '管理登入',
         'ja' => 'ログインを管理する',
@@ -286,6 +327,7 @@ $constStr = [
     ],
     'LoginSuccess' => [
         'en-us' => 'Login Success!',
+        'es-es' => '¡Inicio de sesión exitoso!',
         'zh-cn' => '登录成功，正在跳转',
         'zh-tw' => '登入成功，正在跳轉',
         'ja' => 'ログイン成功、ジャンプ',
@@ -295,6 +337,7 @@ $constStr = [
     ],
     'InputPassword' => [
         'en-us' => 'Input Password',
+        'es-es' => 'Por favor ingrese la contraseña',
         'zh-cn' => '输入密码',
         'zh-tw' => '輸入密碼',
         'ja' => 'パスワードを入力してください',
@@ -304,6 +347,7 @@ $constStr = [
     ],
     'Login' => [
         'en-us' => 'Login',
+        'es-es' => 'Iniciar sesión',
         'zh-cn' => '登录',
         'zh-tw' => '登入',
         'ja' => 'サインイン',
@@ -313,6 +357,7 @@ $constStr = [
     ],
     'Encrypt' => [
         'en-us' => 'Encrypt',
+        'es-es' => 'Cifrar',
         'zh-cn' => '加密',
         'zh-tw' => '加密',
         'ja' => '暗号化',
@@ -322,6 +367,7 @@ $constStr = [
     ],
     'SetpassfileBfEncrypt' => [
         'en-us' => 'Set \'passfile\' in Environments before encrypt',
+        'es-es' => 'Set \'passfile\' in Environments before encrypt',
         'zh-cn' => '先设置passfile才能加密',
         'zh-tw' => '先設定passfile才能加密',
         'ja' => '最初に暗号化する変数にパスファイルを設定します',
@@ -331,6 +377,7 @@ $constStr = [
     ],
     'updateProgram' => [
         'en-us' => 'Update Program',
+        'es-es' => 'Update Program',
         'zh-cn' => '一键更新',
         'zh-tw' => '一鍵更新',
         'ja' => 'ワンクリック更新',
@@ -340,6 +387,7 @@ $constStr = [
     ],
     'UpdateSuccess' => [
         'en-us' => 'Program update Success!',
+        'es-es' => 'Program update Success!',
         'zh-cn' => '程序升级成功！',
         'zh-tw' => '程式升級成功！',
         'ja' => 'プログラムのアップグレードに成功しました！',
@@ -349,6 +397,7 @@ $constStr = [
     ],
     'Setup' => [
         'en-us' => 'Setup',
+        'es-es' => 'Ajustes',
         'zh-cn' => '设置',
         'zh-tw' => '設定',
         'ja' => '設定する',
@@ -358,6 +407,7 @@ $constStr = [
     ],
     'Back' => [
         'en-us' => 'Back',
+        'es-es' => 'Espalda',
         'zh-cn' => '返回',
         'zh-tw' => '返回',
         'ja' => 'back',
@@ -367,6 +417,7 @@ $constStr = [
     ],
     'Theme' => [
         'en-us' => 'Theme',
+        'es-es' => 'Tema',
         'zh-cn' => '主题',
         'zh-tw' => '主題',
         'ja' => 'テーマ',
@@ -376,6 +427,7 @@ $constStr = [
     ],
     'NotNeedUpdate' => [
         'en-us' => 'Not Need Update',
+        'es-es' => 'Not Need Update',
         'zh-cn' => '不需要更新',
         'zh-tw' => '不需要更新',
         'ja' => '更新不要',
@@ -385,6 +437,7 @@ $constStr = [
     ],
     'PlatformConfig' => [
         'en-us' => 'Platform Config',
+        'es-es' => 'Configuración de plataforma',
         'zh-cn' => '平台变量',
         'zh-tw' => '平台變數',
         'ja' => 'プラットフォーム変数',
@@ -394,11 +447,13 @@ $constStr = [
     ],
     'DragSort' => [
         'en-us' => 'Drag to Sort Disk',
+        'es-es' => 'Drag to Sort Disk',
         'zh-cn' => '拖拽改变顺序',
         'zh-tw' => '拖曳改變順序',
     ],
     'SubmitSortdisks' => [
         'en-us' => 'Submit Sort',
+        'es-es' => 'Submit Sort',
         'zh-cn' => '确认排序',
         'zh-tw' => '確認排序',
     ],
@@ -436,6 +491,7 @@ $constStr = [
     ],
     'Home' => [
         'en-us' => 'Home',
+        'es-es' => 'Casa',
         'zh-cn' => '首页',
         'zh-tw' => '首頁',
         'ja' => 'ホーム',
@@ -445,6 +501,7 @@ $constStr = [
     ],
     'Preview' => [
         'en-us' => 'Preview',
+        'es-es' => 'Avance',
         'zh-cn' => '预览',
         'zh-tw' => '預覽',
         'ja' => 'プレビュー',
@@ -454,6 +511,7 @@ $constStr = [
     ],
     'List' => [
         'en-us' => 'List',
+        'es-es' => 'Lista',
         'zh-cn' => '列表',
         'zh-tw' => '列表',
         'ja' => 'リスト',
@@ -472,6 +530,7 @@ $constStr = [
     ],
     'Operate' => [
         'en-us' => 'Operate',
+        'es-es' => 'Funcionar',
         'zh-cn' => '管理',
         'zh-tw' => '管理',
         'ja' => '管理',
@@ -481,6 +540,7 @@ $constStr = [
     ],
     'Logout' => [
         'en-us' => 'Logout',
+        'es-es' => 'Cerrar sesión',
         'zh-cn' => '退出',
         'zh-tw' => '登出',
         'ja' => 'ログアウトする',
@@ -490,6 +550,7 @@ $constStr = [
     ],
     'Create' => [
         'en-us' => 'Create',
+        'es-es' => 'Crear',
         'zh-cn' => '新建',
         'zh-tw' => '建立',
         'ja' => '新しい',
@@ -498,7 +559,8 @@ $constStr = [
         'ar-sa' => 'بنيت حديثا',
     ],
     'Download' => [
-        'en-us' => 'download',
+        'en-us' => 'Download',
+        'es-es' => 'Descargar',
         'zh-cn' => '下载',
         'zh-tw' => '下載',
         'ja' => 'ダウンロードする',
@@ -508,6 +570,7 @@ $constStr = [
     ],
     'ClicktoEdit' => [
         'en-us' => 'Click to edit',
+        'es-es' => 'Haz click para editar',
         'zh-cn' => '点击后编辑',
         'zh-tw' => '點擊後編輯',
         'ja' => 'クリック後に編集',
@@ -517,6 +580,7 @@ $constStr = [
     ],
     'Save' => [
         'en-us' => 'Save',
+        'es-es' => 'Ahorrar',
         'zh-cn' => '保存',
         'zh-tw' => '儲存',
         'ja' => '保存する',
@@ -526,6 +590,7 @@ $constStr = [
     ],
     'FileNotSupport' => [
         'en-us' => 'File not support preview.',
+        'es-es' => 'El archivo no admite la vista previa.',
         'zh-cn' => '文件格式不支持预览',
         'zh-tw' => '檔案格式不支援預覽',
         'ja' => 'ファイル形式はプレビューをサポートしていません',
@@ -535,6 +600,7 @@ $constStr = [
     ],
     'File' => [
         'en-us' => 'File',
+        'es-es' => 'Archivador',
         'zh-cn' => '文件',
         'zh-tw' => '文件',
         'ja' => 'ファイル',
@@ -562,6 +628,7 @@ $constStr = [
     ],
     'CopyAllDownloadUrl' => [
         'en-us' => 'CopyAllDownloadUrl',
+        'es-es' => 'CopiarTodaLaUrlDeDescarga',
         'zh-cn' => '复制所有下载链接',
         'zh-tw' => '複製所有下載連結',
         'ja' => 'すべてのダウンロードリンクをコピー',
@@ -571,6 +638,7 @@ $constStr = [
     ],
     'Search' => [
         'en-us' => 'Search',
+        'es-es' => 'Buscar',
         'zh-cn' => '搜索',
         'zh-tw' => '搜尋',
         'ja' => '検索',
@@ -580,6 +648,7 @@ $constStr = [
     ],
     'EditTime' => [
         'en-us' => 'EditTime',
+        'es-es' => 'EditarHora',
         'zh-cn' => '修改时间',
         'zh-tw' => '修改時間',
         'ja' => '変更時間',
@@ -589,6 +658,7 @@ $constStr = [
     ],
     'Size' => [
         'en-us' => 'Size',
+        'es-es' => 'Tamaño',
         'zh-cn' => '大小',
         'zh-tw' => '大小',
         'ja' => 'サイズ ',
@@ -598,6 +668,7 @@ $constStr = [
     ],
     'Rename' => [
         'en-us' => 'Rename',
+        'es-es' => 'Rebautizar',
         'zh-cn' => '重命名',
         'zh-tw' => '重新命名',
         'ja' => '名前を変更',
@@ -607,6 +678,7 @@ $constStr = [
     ],
     'Move' => [
         'en-us' => 'Move',
+        'es-es' => 'Moverse',
         'zh-cn' => '移动',
         'zh-tw' => '移動',
         'ja' => '移動する',
@@ -616,6 +688,7 @@ $constStr = [
     ],
     'Copy' => [
         'en-us' => 'Copy',
+        'es-es' => 'Dupdo',
         'zh-cn' => '复制',
         'zh-tw' => '複製',
         'ja' => 'コピー',
@@ -625,6 +698,7 @@ $constStr = [
     ],
     'CannotMove' => [
         'en-us' => 'Can not Move!',
+        'es-es' => '¡No se puede mover!',
         'zh-cn' => '不能移动！',
         'zh-tw' => '不能移動！',
         'ja' => '動かない！',
@@ -634,6 +708,7 @@ $constStr = [
     ],
     'Delete' => [
         'en-us' => 'Delete',
+        'es-es' => 'Borrar',
         'zh-cn' => '删除',
         'zh-tw' => '刪除',
         'ja' => '削除する',
@@ -643,6 +718,7 @@ $constStr = [
     ],
     'PrePage' => [
         'en-us' => 'PrePage',
+        'es-es' => 'Pagina anterior',
         'zh-cn' => '上一页',
         'zh-tw' => '上一頁',
         'ja' => '前へ',
@@ -652,6 +728,7 @@ $constStr = [
     ],
     'NextPage' => [
         'en-us' => 'NextPage',
+        'es-es' => 'Siguiente página',
         'zh-cn' => '下一页',
         'zh-tw' => '下一頁',
         'ja' => '次のページ',
@@ -661,6 +738,7 @@ $constStr = [
     ],
     'Upload' => [
         'en-us' => 'Upload',
+        'es-es' => 'Subir',
         'zh-cn' => '上传',
         'zh-tw' => '上傳',
         'ja' => 'アップロードする',
@@ -670,6 +748,7 @@ $constStr = [
     ],
     'UploadFile' => [
         'en-us' => 'Upload File(s)',
+        'es-es' => 'Subir archivo(s)',
         'zh-cn' => '上传文件',
         'zh-tw' => '上傳文件',
         'ja' => 'ファイルをアップロード',
@@ -679,6 +758,7 @@ $constStr = [
     ],
     'UploadFolder' => [
         'en-us' => 'Upload Folder',
+        'es-es' => 'Subir carpeta',
         'zh-cn' => '上传文件夹',
         'zh-tw' => '上傳資料夾',
         'ja' => 'フォルダをアップロード',
@@ -688,6 +768,7 @@ $constStr = [
     ],
     'FileSelected' => [
         'en-us' => 'Select File',
+        'es-es' => 'Seleccione Archivo',
         'zh-cn' => '选择文件',
         'zh-tw' => '選擇文件',
         'ja' => 'ファイルを選択',
@@ -697,6 +778,7 @@ $constStr = [
     ],
     'NoFileSelected' => [
         'en-us' => 'Not Select File',
+        'es-es' => 'Ningún archivo seleccionado',
         'zh-cn' => '没有选择文件',
         'zh-tw' => '沒有選擇文件',
         'ja' => 'ファイルが選択されていません',
@@ -706,6 +788,7 @@ $constStr = [
     ],
     'Submit' => [
         'en-us' => 'Submit',
+        'es-es' => 'Entregar',
         'zh-cn' => '确认',
         'zh-tw' => '確認',
         'ja' => '確認する',
@@ -715,6 +798,7 @@ $constStr = [
     ],
     'Close' => [
         'en-us' => 'Close',
+        'es-es' => 'Cerrar',
         'zh-cn' => '关闭',
         'zh-tw' => '關閉',
         'ja' => '閉じる',
@@ -724,6 +808,7 @@ $constStr = [
     ],
     'InputPasswordUWant' => [
         'en-us' => 'Input Password you Want',
+        'es-es' => 'Ingrese la contraseña que desea',
         'zh-cn' => '输入想要设置的密码',
         'zh-tw' => '輸入想要設置的密碼',
         'ja' => '設定するパスワードを入力してください',
@@ -733,6 +818,7 @@ $constStr = [
     ],
     'ParentDir' => [
         'en-us' => 'Parent Dir',
+        'es-es' => 'directorio de padres',
         'zh-cn' => '上一级目录',
         'zh-tw' => '上一級目錄',
         'ja' => '親ディレクトリ',
@@ -742,6 +828,7 @@ $constStr = [
     ],
     'Folder' => [
         'en-us' => 'Folder',
+        'es-es' => 'Carpeta',
         'zh-cn' => '文件夹',
         'zh-tw' => '資料夾',
         'ja' => 'フォルダー',
@@ -751,6 +838,7 @@ $constStr = [
     ],
     'Name' => [
         'en-us' => 'Name',
+        'es-es' => 'Nombre',
         'zh-cn' => '名称',
         'zh-tw' => '名稱',
         'ja' => '名前',
@@ -760,6 +848,7 @@ $constStr = [
     ],
     'Content' => [
         'en-us' => 'Content',
+        'es-es' => 'Contenido',
         'zh-cn' => '内容',
         'zh-tw' => '內容',
         'ja' => '内容',
@@ -778,6 +867,7 @@ $constStr = [
     ],
     'GetFileNameFail' => [
         'en-us' => 'Fail to Get File Name!',
+        'es-es' => '¡Error al obtener el nombre del archivo!',
         'zh-cn' => '获取文件名失败！',
         'zh-tw' => '獲取檔案名失敗！',
         'ja' => 'ファイル名を取得できませんでした！',
@@ -787,6 +877,7 @@ $constStr = [
     ],
     'GetUploadLink' => [
         'en-us' => 'Get Upload Link',
+        'es-es' => 'Obtener enlace de subida',
         'zh-cn' => '获取上传链接',
         'zh-tw' => '獲取上傳連結',
         'ja' => 'アップロードリンクを取得',
@@ -796,6 +887,7 @@ $constStr = [
     ],
     'Calculate' => [
         'en-us' => 'Calculate',
+        'es-es' => 'Calcular',
         'zh-cn' => '计算',
         'zh-tw' => '計算',
         'ja' => '計算する',
@@ -805,6 +897,7 @@ $constStr = [
     ],
     'UpFileTooLarge' => [
         'en-us' => 'The File is too Large!',
+        'es-es' => '¡El archivo es demasiado grande!',
         'zh-cn' => '文件过大，终止上传。',
         'zh-tw' => '文件過大，終止上傳。',
         'ja' => '超えると、アップロードは終了します。',
@@ -814,6 +907,7 @@ $constStr = [
     ],
     'UploadStart' => [
         'en-us' => 'Upload Start',
+        'es-es' => 'Inicio de subida',
         'zh-cn' => '开始上传',
         'zh-tw' => '開始上傳',
         'ja' => 'アップロードを開始',
@@ -823,6 +917,7 @@ $constStr = [
     ],
     'UploadStartAt' => [
         'en-us' => 'Start At',
+        'es-es' => 'Empieza en',
         'zh-cn' => '开始于',
         'zh-tw' => '開始於',
         'ja' => 'で開始',
@@ -832,6 +927,7 @@ $constStr = [
     ],
     'ThisTime' => [
         'en-us' => 'This Time',
+        'es-es' => 'Esta vez',
         'zh-cn' => '本次',
         'zh-tw' => '本次',
         'ja' => '今回は',
@@ -841,6 +937,7 @@ $constStr = [
     ],
     'LastUpload' => [
         'en-us' => 'Last time Upload',
+        'es-es' => 'Última subida',
         'zh-cn' => '上次上传',
         'zh-tw' => '上次上傳',
         'ja' => '上回は',
@@ -850,6 +947,7 @@ $constStr = [
     ],
     'AverageSpeed' => [
         'en-us' => 'AverageSpeed',
+        'es-es' => 'Velocidad media',
         'zh-cn' => '平均速度',
         'zh-tw' => '平均速度',
         'ja' => '平均速度',
@@ -859,6 +957,7 @@ $constStr = [
     ],
     'CurrentSpeed' => [
         'en-us' => 'CurrentSpeed',
+        'es-es' => 'Velocidad actual',
         'zh-cn' => '即时速度',
         'zh-tw' => '即時速度',
         'ja' => 'インスタントスピード',
@@ -868,6 +967,7 @@ $constStr = [
     ],
     'Expect' => [
         'en-us' => 'Expect',
+        'es-es' => 'Se espera que sea',
         'zh-cn' => '预计还要',
         'zh-tw' => '預計還要',
         'ja' => '期待される',
@@ -877,6 +977,7 @@ $constStr = [
     ],
     'EndAt' => [
         'en-us' => 'End At',
+        'es-es' => 'Termina en',
         'zh-cn' => '结束于',
         'zh-tw' => '結束於',
         'ja' => 'で終了',
@@ -886,6 +987,7 @@ $constStr = [
     ],
     'UploadErrorUpAgain' => [
         'en-us' => 'Maybe error, do upload again.',
+        'es-es' => 'Tal vez error, suba de nuevo.',
         'zh-cn' => '可能出错，重新上传。',
         'zh-tw' => '可能出錯，重新上傳。',
         'ja' => '間違っている可能性があります。もう一度アップロードしてください。',
@@ -895,6 +997,7 @@ $constStr = [
     ],
     'UploadComplete' => [
         'en-us' => 'Upload Complete',
+        'es-es' => 'Subida completada',
         'zh-cn' => '上传完成',
         'zh-tw' => '上傳完成',
         'ja' => 'アップロード完了',
@@ -904,6 +1007,7 @@ $constStr = [
     ],
     'UploadFail23' => [
         'en-us' => 'Upload Fail, contain #.',
+        'es-es' => 'La carga falló porque contiene #.',
         'zh-cn' => '目录或文件名含有#，上传失败。',
         'zh-tw' => '目錄或檔案名含有#，上傳失敗。',
         'ja' => 'ディレクトリまたはファイル名に＃が含まれています。アップロードに失敗しました。',
@@ -934,6 +1038,7 @@ $constStr = [
     ],
     'Wait' => [
         'en-us' => 'Wait',
+        'es-es' => 'Espere',
         'zh-cn' => '稍等',
         'zh-tw' => '稍等',
         'ja' => 'ちょっと待って',
@@ -970,6 +1075,7 @@ $constStr = [
     ],
     'DiskName' => [
         'en-us' => 'Showed Name',
+        'es-es' => 'Nombre mostrado',
         'zh-cn' => '显示名称',
         'zh-tw' => '顯示名稱',
         'ja' => '表示名',
@@ -1082,6 +1188,7 @@ $constStr = [
     ],
     'CopyUrl' => [
         'en-us' => 'Copy URL',
+        'es-es' => 'Copiar URL',
         'zh-cn' => '复制链接',
         'zh-tw' => '複製連結',
         'ja' => 'リンクをコピー',
@@ -1091,6 +1198,7 @@ $constStr = [
     ],
     'Success' => [
         'en-us' => 'Success',
+        'es-es' => 'Éxito',
         'zh-cn' => '成功',
         'zh-tw' => '成功',
         'ja' => '成功',
@@ -1105,6 +1213,7 @@ $constStr = [
     ],
     'Refresh' => [
         'en-us' => 'Refresh',
+        'es-es' => 'Actualizar',
         'zh-cn' => '刷新',
         'zh-tw' => '重新整理',
         'ja' => 'リフレッシュ',
@@ -1114,6 +1223,7 @@ $constStr = [
     ],
     'SelectLanguage' => [
         'en-us' => 'Select Language',
+        'es-es' => 'Seleccione el idioma',
         'zh-cn' => '选择语言',
         'zh-tw' => '選擇語言',
         'ja' => '言語を選択してください',
@@ -1123,6 +1233,7 @@ $constStr = [
     ],
     'RefreshCache' => [
         'en-us' => 'RefreshCache',
+        'es-es' => 'Actualizar caché',
         'zh-cn' => '刷新缓存',
         'zh-tw' => '重新整理快取',
         'ja' => 'キャッシュを再構築',
