@@ -379,11 +379,10 @@ function main($path)
                 if (isHideFile($k)) unset($files['list'][$k]);
             }
         }
-        //return output(json_encode($files['list']), 200, ['Content-Type' => 'application/json']);
-        foreach($files['list'] as $k=>$v){
-        echo $v['name'];//输出数组中的id
+        foreach($files['list'] as $k => $v) {
+            echo $v['name'];//输出数组中的id
         }
-        return
+        return;
     }
     // random file
     if (isset($_GET['random'])&&$_GET['random']!=='') {
