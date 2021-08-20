@@ -226,7 +226,7 @@ function main($path)
             }
             if ($_GET['json2']) {
                 // return a json
-                return output(json_encode($files['list']), 200, ['Content-Type' => 'application/json']);
+                return output($files['list']), 200, ['Content-Type' => 'text/plain']);
             }
             if (getConfig('autoJumpFirstDisk')) return output('', 302, [ 'Location' => path_format($_SERVER['base_path'].'/'.$disktags[0].'/') ]);
         } else {
