@@ -374,13 +374,9 @@ function main($path)
     }
     if ($_GET['filename']) {
         // return a json
-        if ($files['type']=='folder' && !$_SERVER['admin']) {
-            foreach ($files['list'] as $k => $v) {
-                if (isHideFile($k)) unset($files['list'][$k]);
-            }
-        }
         foreach($files['list'] as $k => $v) {
             echo $v['name'];//输出数组中的id
+            echo PHP_EOL;
         }
         return;
     }
