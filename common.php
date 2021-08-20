@@ -372,6 +372,19 @@ function main($path)
         }
         return output(json_encode($files['list']), 200, ['Content-Type' => 'application/json']);
     }
+    if ($_GET['filename']) {
+        // return a json
+        if ($files['type']=='folder' && !$_SERVER['admin']) {
+            foreach ($files['list'] as $k => $v) {
+                if (isHideFile($k)) unset($files['list'][$k]);
+            }
+        }
+        //return output(json_encode($files['list']), 200, ['Content-Type' => 'application/json']);
+        foreach($files['list'] as $k=>$v){
+        echo $v['name'];//输出数组中的id
+        }
+        return
+    }
     // random file
     if (isset($_GET['random'])&&$_GET['random']!=='') {
         if ($_SERVER['ishidden']<4) {
